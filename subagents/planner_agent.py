@@ -1,9 +1,10 @@
 from google.adk.agents import LlmAgent
+from shared.chat_model import chat_model
 
 planner_agent = LlmAgent(
     name="PlannerAgent",
     description="Breaks down the main question into structured sub-questions.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
         You are a research planner.
         Your task is to break down the user's question into 1 to 2 sub-questions that, together, cover the topic.

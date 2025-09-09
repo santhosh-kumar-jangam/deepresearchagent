@@ -1,9 +1,10 @@
 from google.adk.agents import LlmAgent
+from shared.chat_model import chat_model
 
 research_writer_agent = LlmAgent(
     name="ResearchWriterAgent",
     description="Produces a structured and professional research report based on validated research outputs.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
     You are the ResearchWriterAgent.
 

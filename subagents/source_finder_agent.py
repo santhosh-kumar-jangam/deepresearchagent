@@ -1,11 +1,12 @@
 from google.adk.agents import LlmAgent
 from tools.websearchtool import web_search
 from tools.webscrapertool import web_scraper
+from shared.chat_model import chat_model
 
 source_finder_agent = LlmAgent(
     name="SourceFinderAgent",
     description="Identifies and retrieves relevant sources for each sub-question, including their full content.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
         You are the SourceFinderAgent, responsible for gathering supporting material.
 

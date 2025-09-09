@@ -1,6 +1,7 @@
 from google.adk.agents import LlmAgent
 from google.adk.tools import AgentTool
 
+from shared.chat_model import chat_model
 from subagents.planner_agent import planner_agent
 from subagents.source_finder_agent import source_finder_agent
 from subagents.summarizer_agent import summarizer_agent
@@ -9,7 +10,7 @@ from subagents.review_agent import reviewer_agent
 root_agent = LlmAgent(
     name="DeepResearchAgent",
     description="Agent that orchestrates the research.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
     You are the RootAgent responsible for orchestrating the initial research process.
 

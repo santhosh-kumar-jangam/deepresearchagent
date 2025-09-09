@@ -14,7 +14,7 @@ def web_search(query: str) -> list[dict]:
     results = []
     try:
         ddgs = DDGS()
-        search_results = list(ddgs.text(query, max_results=2))
+        search_results = list(ddgs.text(query, max_results=3))
 
         for res in search_results:
             results.append({

@@ -5,11 +5,12 @@ from subagents.planner_agent import planner_agent
 from subagents.source_finder_agent import source_finder_agent
 from subagents.summarizer_agent import summarizer_agent
 from subagents.research_writer_agent import research_writer_agent
+from shared.chat_model import chat_model
 
 reviewer_agent = LlmAgent(
     name="ReviewerAgent",
     description="Validates and improves sub-questions, sources, and summary before delegating to the ResearchWriterAgent.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
     You are the ReviewerAgent responsible for evaluating the quality of the research pipeline outputs.
 

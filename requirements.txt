@@ -1,2 +1,4 @@
 google-adk==1.13.0
 ddgs==9.5.4
+litellm==1.68.0
+beautifulsoup4==4.10.0

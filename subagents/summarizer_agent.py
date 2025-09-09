@@ -1,9 +1,10 @@
 from google.adk.agents import LlmAgent
+from shared.chat_model import chat_model
 
 summarizer_agent = LlmAgent(
     name="SummarizerAgent",
     description="Synthesizes the content from all retrieved sources into a single consolidated summary.",
-    model="gemini-2.5-flash",
+    model=chat_model,
     instruction="""
         You are the SummarizerAgent.
 
